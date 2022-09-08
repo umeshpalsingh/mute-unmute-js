@@ -1,0 +1,30 @@
+
+  <div class="speaker-icon" id="mute-video">
+        <img src="./assets/images/001-audio.png" id="audio" style="display: none;">
+        <img src="./assets/images/002-mute.png" id="mute" style="display: block;">
+      </div>
+
+
+
+
+
+<script>
+    $("#video").prop('muted', true);
+
+    $("#mute-video").click(function () {
+
+      if ($("#video").prop('muted')) {
+        $("video").prop('muted', false);
+        var mute = document.getElementById('mute');
+        mute.style.display = 'none';
+        var audio = document.getElementById('audio');
+        audio.style.display = 'block'
+      } else {
+        $("#video").prop('muted', true);
+        var mute = document.getElementById('mute');
+        mute.style.display = 'block';
+        var audio = document.getElementById('audio');
+        audio.style.display = 'none'
+      }
+    });
+  </script>
